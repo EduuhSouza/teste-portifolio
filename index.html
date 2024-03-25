@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    
+    <script defer src="js.js"></script>
+
+    <link rel="shortcut icon" href="imgs/logo.portifólio-removebg-preview.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="star.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portifólio </title>
+</head>
+<body>
+
+    <!-- -background star--- -->
+    
+    <section class="wrapper-star">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="title">
+            
+        </div>
+    </section>
+
+
+
+
+    <!--------- SCROLL-------- -->
+
+    <div id="progressobar"></div>
+    <div id="scrollPath"></div>
+
+
+<!-- ------scroll js -->
+
+<script>
+    let progresso = document.getElementById('progressobar');
+
+    let totalHeight = document.body.scrollHeight = window.innerHeight;
+
+    window.onscroll = function(){
+        let progressoHeight = (window.pageYOffset / totalHeight) * 100;
+        progresso.style.height = progressoHeight + "%"
+    }
+</script>
+
+        <!-- --FIM SCROLL -->
+
+
+
+
+
+        <!-- INTRO PAGE-------- -->
+
+
+
+    
+        <!-- -------BOTÃO NAVEGAÇÃO--------- -->
+
+        <header class="header">
+            <img class="logo" src="imgs/logo.portifólio-removebg-preview.png" alt="">
+
+        <nav class="navbar">
+            <!-- <a href=""> Sobre</a> -->
+            <a href="#habilidades"> Habilidades</a>
+            <a href=""> Projetos</a>
+            <a href=""> Contato</a>
+            <a href="#inicio"> inicio </a>
+        </nav>
+    </header>
+
+    
+        <!----------SOBRE--------- -->
+<section class="home" id="inicio">
+
+        <div class="content-home">
+            <div class="flex">
+            <div class="text-content-home">
+            <h1> Oi, eu sou <span>Eduarda</span></h1>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aperiam, suscipit provident iure maxime fugit velit non sint aut itaque, ad laudantium quo labore atque quisquam rem dolores eaque cupiditate!</p>
+
+
+        </div>
+
+        <div class="flex-img">
+       <div class="img-perfil">
+        <div class="slider">
+        <img src="imgs/Perfil.jpeg" alt="" class="selected">
+        <!-- <img src="imgs/avatar2.jpeg" alt=""> -->
+       </div>
+    </div>
+</div>
+
+     </div>
+        </div>
+
+</section>
+
+
+         <!-- ICONES REDES -->
+
+         
+         <div class="social-menu">
+            <div class="social-icon">
+                <a href="https://www.linkedin.com/in/eduarda-souza-3157942b0/" class="icon1"> <i class="fa-brands fa-linkedin-in"></i></a>
+               
+            </div>
+
+            <div class="social-icon">
+                <a href="https://www.instagram.com/souza.eduuh/" class="icon2"> <i class="fa-brands fa-instagram"></i></a>
+                
+            </div>
+
+            <div class="social-icon">
+                <a href="https://github.com/EduuhSouza" class="icon3"> <i class="fa-brands fa-github"></i></a>
+                
+            </div>
+        </div>
+
+       
+
+    </section>
+    
+  
+
+        <!-- ---FINAL SOBRE------- -->
+
+        <!-- -----COMEÇO PARALLAX-------- -->
+
+
+         <!--  PARALLAX 1 -->
+        <section class="modulo content">
+        
+            <section class="modulo parallax parallax-1">
+
+            </section>
+            <section class="modulo content">
+                <div class="container">
+                    <h2> "Sonhos exigem paciência no resultado e dedicação no processo" </h2>
+                </div>
+        </section>
+        </section>
+
+
+
+        <div class="container2">
+        
+
+        <!-- -------CARDS-------- -->
+
+    <!-------------- CSS-------- -->
+
+    <h1 class="text-card"> Habilidades</h1>
+
+    <div class="card-container">
+<div class="card" id="habilidades">
+    <div class="wrapper">
+        <img class="cover-img" src="https://kinsta.com/pt/wp-content/uploads/sites/3/2023/06/css-image-styling.jpg">
+
+    </div>
+
+    <h1 class="tittle-img"> CSS </h1>
+
+    <img class="conteudo" src="https://diziglobalsolution.com/wp-content/uploads/2023/04/logo-css-3-1536.png" alt="">
+
+
+
+</div>
+
+<!-- ---------HTML-------- -->
+
+<div class="card" id="softskills">
+    <div class="wrapper">
+        <img class="cover-img" src="https://www.locaweb.com.br/blog/wp-content/uploads/2022/11/html-semantico.png">
+
+    </div>
+
+    <h1 class="tittle-img"> HTML </h1>
+
+    <img class="conteudo" src="https://cdn-icons-png.flaticon.com/512/1216/1216733.png" alt="">
+
+</div>
+
+
+<!-- ---JS--------- -->
+<div class="card" id="softskills">
+    <div class="wrapper">
+        <img class="cover-img" src="https://www.valuehost.com.br/blog/wp-content/uploads/2020/01/original-e8278705fab1f1036f26c2419edf8f0f.jpeg">
+
+    </div>
+
+    <h1 class="tittle-img"> JavaScript </h1>
+
+    <img class="conteudo" src="https://learnwithrakesh.files.wordpress.com/2017/07/javascript_logo-e1499715359900.png" alt="">
+
+
+</div>
+</div>
+
+</div>
+
+<!-- ------- PROJETOS-------- -->
+
+<!-- <div class="container-projeto">
+    <div class="card-projeto">
+        <div class="imgBx" data-text="Design">
+        <img src="" alt="">
+    </div>
+    <div class="content-projeto">
+        <h3> Design</h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque placeat dolore animi sed corrupti ut expedita nihil rerum repellendus provident nemo, quas molestias veritatis in. Itaque officia labore minus? Illum.</p>
+        <a href="#"> Saiba Mais</a>
+    </div>
+</div>
+</div>
+</div> -->
+
+
+
+
+<!-- FOOTER----------------- -->
+
+
+<div class="footer-container">
+
+    <div class="social-icons">
+        <div class="social-icon">
+            <a href="https://www.linkedin.com/in/eduarda-souza-3157942b0/" class="icon1"> <i class="fa-brands fa-linkedin-in"></i></a>
+
+            <a href="https://github.com/EduuhSouza" class="icon3"> <i class="fa-brands fa-github"></i></a>
+
+            <a href="https://www.instagram.com/souza.eduuh/" class="icon2"> <i class="fa-brands fa-instagram"></i></a>
+        
+    </div>
+<footer>
+    <div class="footerNav">
+        <a href="#softskills"> Habilidades </a>
+            <a href="#"> Projetos</a>
+            <a href="#"> Contato</a>
+            <a href="#inicio"> inicio </a>
+
+    </div>
+    <div class="footer-bottom">
+        Desenvolvido por Eduarda Souza | &real; Desenvolvimento Web FullStack Instituto da Oportunidade Social ( IOS )
+    </div>
+</footer>
+</div>
+
+</body>
+</html>
