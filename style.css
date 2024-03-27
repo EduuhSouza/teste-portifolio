@@ -1,25 +1,52 @@
 @charset "utf-8";
 
+/* ----FONTES---------- */
+
+
+
+@font-face {
+    font-family: fonte1;
+    src: url(fontes/Good\ Wish.otf);
+}
+
+@font-face {
+    font-family: fonte2;
+    src: url(fontes/KGRedHands.ttf);
+} /*  fonte parágafro */
+
+@font-face {
+    font-family: fonte3;
+    /* src: url(fontes/Optimus\ Bold\ Italic.otf); */
+}
+
+@font-face {
+    font-family: fonte4;
+    src: url(fontes/appopaint-Regular.otf);
+}/* Fonte h1  */
+
+@font-face {
+    font-family: fonte5;
+    src: url(fontes/edosz.ttf);
+} /* fonte navBar */
+
+/* FINAL FONTES---------------  */
+
+
 body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     background-color: rgb(0, 0, 0);
-
     outline: none;
 
    
     font-family: sans-serif;
-    transition: all 2s ease;
+    /* transition: all 2s ease; */
 }
 
 html{
     scroll-behavior: smooth;
 }
-
-/* ------- INTRO ------ */
-
-
 
 
 /* ----------SCROLL-------- */
@@ -127,18 +154,18 @@ html{
 
 .navbar a{
     color: white;
-    font-size: 18px;
+    font-size: 1.3em;
     text-decoration: none;
     margin-left: 35px;
     transition: 1s;
-    font-family: sans-serif;
+    font-family: fonte5;
     transition: all .5s ease-in-out;
     
 }
 
 .navbar a:hover{
     color: rgb(255, 230, 0);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
     padding: 10px 15px;
     border-radius: 1.5em .5em;
     
@@ -180,11 +207,13 @@ section.home{
 
 .text-content-home h1{
     margin-top: 50%;
-    font-size: 35px;
-    color: aliceblue;
-    font-family: sans-serif;
+    font-size: 3em;
+    color: #f0f8ff;
+    font-family: fonte4;
+    /* text-transform: uppercase; */
     /* font-weight: 600; */
 }
+
 
 .text-content-home span{
     color: transparent;
@@ -192,6 +221,12 @@ section.home{
     position: relative;
     transition: all 1s;
 }
+
+.text-content-home p{
+    font-size: 1em;
+    font-family: fonte2;
+}
+
 
 span::before{ 
     content: "Eduarda";
@@ -207,6 +242,7 @@ span::before{
 
 span:hover::before{
     width: 100%;
+   
 } 
 
 @keyframes animate {
@@ -326,9 +362,13 @@ section.home .flex{
 section.modulo h2{
     margin-bottom: 3em;
     margin-top: 3em;
-    font-size: 1.5em;
+    font-size:3em;
+    font-family: fonte5;
     text-align: center;
-    color: white;
+    color: rgb(255, 174, 0);
+    text-shadow: 2px 2px 10px black,
+    2px 2px 20px black,
+    0px 2px 5px rgb(0, 0, 0);
 }
 
 
@@ -371,172 +411,438 @@ section.modulo.parallax:after{
 .container2{
 
     content: "";
-    height: 100%;
+    height: 150vh;
     width: 100%;
-    background-color: #5f5f5f80;
+    background-color: #91919180;
     /* z-index: 8;  */
     /* position: absolute; */
+    /* background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 20%, rgb(34, 0, 66)) ; */
 
     
 }
 
+
 /*------------ CARD SOFTSKILL ---------*/
 
-.text-card{
-    padding: 2em;
-    text-align: center;
-    color: #ffffff;
-    background: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 20%, rgb(34, 0, 66)) ;
-}
-
-.card{
-    margin-top: 5em;
-    width: 70%;
-    height: 200px;
-    position: relative;
+.body-card{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    /* padding: 0 36px; */
-    /* margin: 0 50px; */
-    cursor: pointer;
-    z-index: 1;
+    align-items: center;
+    width: 80%;
+    margin-left: 15%;
 }
 
-.card-container{
+.container2 h1{
+    /* margin-top: 3em; */
+text-align: center;
+font-size: 2em;
+color: white;
+background: linear-gradient(40deg,black, black, purple, rgb(255, 174, 0), black, black);
+padding: 1em;
+}
+
+.icon-card i{
+
+    margin: 50px 50px 10px;
+    font-size: 6em;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.icon-card p{
+    font-size: 10px;
+    text-align: center;
+}
+
+#css-card:hover{
+    color: #0099ff;
+}
+
+#html-card:hover{
+    color: #ffa600;
+}
+
+#js-card:hover{
+color: #ffc400;
+}
+
+#bt-card:hover{
+color: rgb(212, 0, 255);
+}
+
+#design-card:hover{
+    color: white;
+}
+
+#org-card:hover{
+    color: rgb(194, 194, 194);
+}
+
+#equipe-card:hover{
+    color: rgb(115, 255, 0);
+}
+
+
+/* projetos------------------------- */
+
+.body-pr{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cover-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-/* --------TITTLE--------- */
 
-.tittle-img{
+.projetos{
     color: white;
-    font-family: sans-serif;
-    font-size: 1em;
-    width: 10%;
-    transition: transform 0.5s;
-    /* opacity: 0; */
+    text-align: center;
+    margin-top: 2em;
 }
 
-#html{
-    width: 40%;
-    box-sizing: content-box;
+.container-pr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
 
-}
+    flex-wrap: wrap;
+    padding: 40px 0;
 
-/* -----CONTEUDO-------- */
-
-.wrapper{
-    transition: all 0.5s;
-    position: absolute;
-    width: 70%;
-    z-index: -1;
-
-}
-
-.wrapper::before,
-.wrapper::after{
-    content: "";
-    opacity: 0;
-    width: 80%;
-    height: 20%;
-    transition: all 0.5s;
-    position: absolute;
-    left: 0;
-    box-shadow: 0 0 10px;
-
-}
-
-.wrapper::before{
-    top: 0;
-    /* height: 100%; */
-    background-image: linear-gradient(to top, rgba(12, 13, 19, 0.5), rgba(
-        12, 13, 19) 150%);
-}
-
-.wrapper::after{
-    bottom: 0;
-   opacity: 1;
-   background-image: linear-gradient(to top, rgba(12, 13, 19, 0.5) 97%);
-}
-
-.conteudo{
     
-    width: 40%;
-    opacity: 0;
+    
+}
+
+.container-pr .card-pr{
+    position: relative;
+    min-width: 320px ;
+    height: 440px;
+    box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.719),
+     inset 0px 5px 5px rgba(204, 0, 255, 0.493);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.container-pr .card-pr .box{
     position: absolute;
-    z-index: -1;
-    transition: all 0.5s;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: linear-gradient(30deg, black, rgba(144, 2, 238, 0.678), rgb(150, 1, 1), black);
 
-    box-shadow: 0 0 20px black;
-    backdrop-filter: blur(10px);
-    border-radius: 10% 15%;
-    padding: 4% 5%;
+    height: 60%;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease-in-out;
+}
+
+.container-pr .card-pr .box .content-pr{
+    padding: 20px;
+    text-align: center;
 
 }
 
+.container-pr .card-pr .box h2{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 8em;
+    color: rgb(0, 0, 0, 0.05);
+    transition: 0.5s;
+    pointer-events: none;
 
-.card:hover .wrapper{
+}
+
+.container-pr .card-pr:hover .box .content-pr h2{
+color: rgba(255, 255, 255, 0.432);
+font-size: 5em;
+width: 80%;
+
+}
+
+.container-pr .card-pr .box .content-pr h3{
+    font-size: 1.8em;
+    color: #ffffff;
+    z-index: 1;
+    margin-top: 4em;
+    background: black;
+    transition: 0.5s;
+    font-family: fonte5;
+}
+
+
+.container-pr .card-pr .box .content-pr a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #ffffff;
+    font-family: fonte5;
+    font-size: 1.5em;
+    margin-top: 13em;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+
+}
+
+.container-pr .card-pr:hover .box .content-pr a{
+    /* background: linear-gradient(30deg, purple, black); */
+    background: rgba(184, 182, 182, 0.61);
+}
+
+.container-pr .card-pr:hover .box{
+    transform: translateY(-50px);
+    background: url(https://img.freepik.com/fotos-premium/conceito-de-criatividade-com-lampada-feita-de-mistura-de-tinta-a-oleo-ilustracao-generativa-ai_438099-11881.jpg);
+    background-position: 50%;
+    background-size: cover;
+    box-shadow: 0 10px 20px rgba(131, 131, 131, 0.507);
+    
+    
+    
+}
+
+    /* CARD HTML E CSS-------------- */
+
+
+    .container-pr2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        flex-wrap: wrap;
+        padding: 40px 0;
+    
+        
+        
+    }
+    
+    .container-pr2 .card-pr2{
+        position: relative;
+        min-width: 320px ;
+        height: 440px;
+        box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.719),
+         inset 0px 5px 5px rgba(255, 0, 0, 0.493);
+        border-radius: 15px;
+        margin: 30px;
+    }
+    
+    .container-pr2 .card-pr2 .box2{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+
+        height: 60%;
+
+        background: linear-gradient(30deg, black, rgba(144, 2, 238, 0.678), rgb(150, 1, 1), black);      
+    
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s ease-in-out;
+    }
+    
+    .container-pr2 .card-pr2 .box2 .content-pr2{
+        padding: 20px;
+        text-align: center;
+    
+    }
+    
+    .container-pr2 .card-pr2 .box2 h2{
+        position: absolute;
+        font-family: sans-serif;
+        top: -10px;
+        right: -10px;
+        font-size: 8em;
+        color: rgb(0, 0, 0, 0.05);
+        transition: 0.5s;
+        pointer-events: none;
+    
+    }
+    
+    .container-pr2 .card-pr2:hover .box2 .content-pr2 h2{
+    color: rgba(255, 255, 255, 0.432);
+    font-size: 5em;
     width: 80%;
-    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.61);
+ 
+    
+    }
+    
+    .container-pr2 .card-pr2 .box2 .content-pr2 h3{
+        font-size: 1.5em;
+        font-family: fonte5;
+        background: black;
+        margin-top: 4em;
+        color: #ffffff;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    
+    
+    .container-pr2 .card-pr2 .box2 .content-pr2 a{
+        position: relative;
+        display: inline-block;
+        padding: 8px 20px;
+        background: #ffffff;
+        font-family: fonte5;
+        font-size: 1.5em;
+        margin-top: 13em;
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 400;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+    
+    
+    }
+    
+    .container-pr2 .card-pr2:hover .box2 .content-pr2 a{
+        /* background: linear-gradient(30deg, purple, black); */
+        background: rgba(184, 182, 182, 0.541);
 
-}
+    }
+    
+    .container-pr2 .card-pr2:hover .box2{
+        transform: translateY(-50px);
+        background: url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/240189245/original/69bb75f2eff2256a344fcb8cbba4714fa209ef5a/fix-html-css-javascript-and-node-js-bugs.jpeg);
+        background-size: cover;
+        /* background-position: 50%; */
+        box-shadow: 0 10px 20px rgba(131, 131, 131, 0.507);
+        
+        
+        
+    }
+    
 
+    /* JS-------------------------- */
 
+    .container-pr3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        flex-wrap: wrap;
+        padding: 40px 0;
+    
+        
+        
+    }
+    
+    .container-pr3 .card-pr3{
+        position: relative;
+        min-width: 320px ;
+        height: 440px;
+        box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.719),
+         inset 0px 5px 5px rgba(204, 0, 255, 0.493);
 
-/* -----TEXTO IMG------- */
-
-.card:hover .tittle-img{
-    transform: translate3d(0, -50%, 100px);
-    opacity: 0;
-}
-
-
-
-.card:hover .wrapper::after,
-.wrapper::before
-{
-    opacity: 1;
-}
-
-.card:hover .wrapper::after{
-    height: 25px;
-}
-
-.card:hover .wrapper::before{
-    opacity: 1;
-}
-
-.card:hover .conteudo{
-    opacity: 1;
-    transform: translate3d(0, -30px, -100px );
-}
-
-
-
-
+        border-radius: 15px;
+        margin: 30px;
+    }
+    
+    .container-pr3 .card-pr3 .box3{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        background: linear-gradient(30deg, black, rgba(144, 2, 238, 0.678), rgb(150, 1, 1), black);
+        
+        height: 60%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .5s ease-in-out;
+    }
+    
+    .container-pr3 .card-pr3 .box3 .content-pr3{
+        padding: 20px;
+        text-align: center;
+    
+    }
+    
+    .container-pr3 .card-pr3 .box3 h2{
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        font-size: 8em;
+        color: rgb(0, 0, 0, 0.05);
+        transition: 0.5s;
+        pointer-events: none;
+    
+    }
+    
+    .container-pr3 .card-pr3:hover .box3 .content-pr3 h2{
+    color: rgba(255, 255, 255, 0.432);
+    font-size: 5em;
+    width: 80%;
+    
+    }
+    
+    .container-pr3 .card-pr3 .box3 .content-pr3 h3{
+        font-size: 1.5em;
+        font-family: fonte5;
+        margin-top: 4em;
+        background: black;
+        color: #ffffff;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    
+    
+    .container-pr3 .card-pr3 .box3 .content-pr3 a{
+        position: relative;
+        display: inline-block;
+        padding: 8px 20px;
+        background: #ffffff;
+        font-family:fonte5;
+        font-size: 1.5em;
+        margin-top: 13em;
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 400;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+    
+    }
+    
+    .container-pr3 .card-pr3:hover .box3 .content-pr3 a{
+        /* background: linear-gradient(30deg, purple, black); */
+        background: rgba(184, 182, 182, 0.61);
+    }
+    
+    .container-pr3 .card-pr3:hover .box3{
+        transform: translateY(-50px);
+        background: url(https://areadev.com.br/wp-content/uploads/2022/10/JAVASCRIPT.png);
+        background-position: 50%;
+        background-size: cover;
+        box-shadow: 0 10px 20px rgba(131, 131, 131, 0.507);
+        
+        
+        
+    }
+    
 
 
 /* ----FOOOTEEEEEERRRR-------- */
+
 footer{
-    width: 100%;
+    background-color: black;
 }
 
-
 .footer-container{
-    background-color: rgba(82, 82, 82, 0.603);
-    
     margin-top: 5em;
-    width: 92%;
+    width: 100%;
     padding: 70px 30px 20px;
     box-shadow: 0 0 30px white;
 }
@@ -563,7 +869,7 @@ footer{
 
 .footerNav a{
     font-size: 1em;
-    font-family: sans-serif;
+    font-family: fonte2;
     color: #ffc400;
     /* box-shadow: 0 0 10px rgb(255, 255, 255); */
     border-radius: 10px 20px;
@@ -580,19 +886,63 @@ footer{
 
 .footer-bottom{
     color: #ffffff;
-    background: linear-gradient(50deg, rgb(58, 58, 58),rgba(58, 58, 58, 0.664),rgb(107, 0, 0), purple, rgba(58, 58, 58, 0.747), rgba(58, 58, 58, 0.61));
+    background: linear-gradient(50deg, black,black,rgb(107, 0, 0), purple,black, black, black);
     font-size: 1em;
-    font-family: sans-serif;
+    font-family: fonte2;
     padding: 2em;
     text-align: center;
 }
 
 
 /* MEDIA -------- */
-@media (max-width: 700px) {
+@media (max-width: 720px) {
+
+/* CARDS -----------*/
+
+.body-card{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrapper{
+    transition: all 0.5s;
+    /* position: absolute; */
+    /* width: 100%; */
+    z-index: -1;
+
+}
+
+
+.conteudo{
+    
+    width: 40%;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    transition: all 0.5s;
+
+    
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    border-radius: 10% 15%;
+    padding: 4% 5%;
+
+}
 
 
 
+
+
+/* PROJETOS -------*/
+    .body-pr
+    {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+/* footer----------- */
     .footer-container{
        
         width: 100%;

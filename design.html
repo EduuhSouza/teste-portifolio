@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br ">
+<head>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="design.css">
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Projetos Design</title>
+</head>
+<body>
+
+    <div class="intro">
+        <img src="imgs/logo.portifólio-removebg-preview.png" alt="ES logo" data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom">
+        <h1 class="logo">
+            <Span class="logo-parts">S</Span>
+            <Span class="logo-parts">O</Span>
+            <Span class="logo-parts">U</Span>
+            <Span class="logo-parts">Z</Span>
+            <Span class="logo-parts">A</Span>
+        </h1>
+        <P> Bem-vindo(a) aos meus projetos</P>
+    </div>
+
+
+
+
+
+<!-- SCRIPT INTRO---------- -->
+<script>
+
+    let intro = document.querySelector('.intro');
+    let logo = document.querySelector('.logo');
+    let logoSpan = document.querySelectorAll('.logo-parts');
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+        logoSpan.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.add('active');
+            }, (index + 1) * 100);
+        });
+
+        setTimeout(() => {
+            logoSpan.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.remove('active');
+                span.classList.add('fade');
+            }, (span + 1) * 50);
+
+            });
+        }, 2000);
+
+            setTimeout(() => {
+                intro.style.top = '-100vh';
+            }, 2300);
+        });
+    });
+
+
+
+</script>
+
+<div class="body-card">
+<div class="content">
+    <div class="container">
+        <div class="card card1">
+            <div class="card-content">
+                <h2> IA </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempore, quae, quam corrupti beatae suscipit adipisci delectus obcaecati ab nisi, velit atque consequatur quisquam voluptates reprehenderit culpa veniam? Sunt, saepe.</p>
+            </div>
+        </div>
+        </div>
+
+
+    <div class="container">
+        <div class="card card1">
+            <div class="card-content">
+                <h2> IA </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempore, quae, quam corrupti beatae suscipit adipisci delectus obcaecati ab nisi, velit atque consequatur quisquam voluptates reprehenderit culpa veniam? Sunt, saepe.</p>
+            </div>
+        </div>
+        </div>
+
+
+    <div class="container">
+        <div class="card card1">
+            <div class="card-content">
+                <h2> IA </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempore, quae, quam corrupti beatae suscipit adipisci delectus obcaecati ab nisi, velit atque consequatur quisquam voluptates reprehenderit culpa veniam? Sunt, saepe.</p>
+            </div>
+        </div>
+        </div>
+    
+        <div class="container">
+        <div class="card card1">
+            <div class="card-content">
+                <h2> IA </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempore, quae, quam corrupti beatae suscipit adipisci delectus obcaecati ab nisi, velit atque consequatur quisquam voluptates reprehenderit culpa veniam? Sunt, saepe.</p>
+            </div>
+        </div>
+        </div>
+
+
+</div>
+
+</div>
+<script>
+    AOS.init();
+  </script>
+</body>
+</html>
