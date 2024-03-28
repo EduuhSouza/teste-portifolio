@@ -10,6 +10,11 @@ body{
     background: linear-gradient(40deg, black, rgba(255, 145, 0, 0.568), gray);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 /* ----------SCROLL-------- */
 
 ::-webkit-scrollbar{
@@ -240,7 +245,7 @@ img{
 /* projetos-------------------- */
 
 .pr-h1{
-    margin-top: 1em;
+    margin-top: 7em;
     color: #ffd000;
     box-shadow: 0 0 20px white;
     padding: 2em;
@@ -257,6 +262,7 @@ img{
 }
 
 .box-area{
+
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 grid-gap: 20px;
@@ -268,12 +274,14 @@ margin-top: 50px;
    position: relative;
    overflow: hidden;
    height: 100%;
+   margin-top: 10em;
    box-shadow: 5px 5px 15px black;
    background: black;
 }
 
 .box img{
    width: 100%;
+   height: 100%;
    border-radius: 10px;
    display: block;
    transition: transform 0.5s;
@@ -305,15 +313,18 @@ margin-top: 50px;
    font-family: sans-serif;
    font-size: 30px;
    letter-spacing: 2px;
+   color: #ffd000;
 }
 
 .icon{
    color: #008aff;
-   font-size: 40px;
+   font-size: 20px;
+   
 }
 
 .icon i{
-   font-size: 30px;
+
+   /* font-size: 30px; */
    color: rgb(0, 0, 0);
    line-height: 60px;
    cursor: pointer;
@@ -321,14 +332,20 @@ margin-top: 50px;
    margin-top: 10px;
    color: #ffffff;
    text-decoration: none;
-   font-size: 50px;
+   font-size: 35px;
    /* background: rgb(255, 0, 0); */
    text-align: center;
    padding: 5px 15px;
 }
 
+.icon i:hover{
+    color: #ffbb00;
+    font-size: 45px;
+}
+
 .overlay p{
    width: 100%;
+   color: #ffd000;
 }
 
 .box:hover img{
@@ -337,4 +354,95 @@ margin-top: 50px;
 
 .box:hover .overlay{
    height: 100%;
+}
+
+/* ----FOOOTEEEEEERRRR-------- */
+
+.footer-container{
+    margin-top: 25em;
+    width: 100%;
+    padding: 70px 30px 20px;
+    box-shadow: 0 0 30px white;
+    text-align: center;
+}
+
+.social-icon a{
+
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: rgba(128, 128, 128, 0.432);
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 8px;
+    box-shadow: 0 4px 2px rgba(192, 192, 192, 0.541);
+    transition: all .5s ease-in-out;
+}
+
+.social-icon i{
+    
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    line-height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+
+.icon1:hover{
+    background: rgb(0, 145, 189);
+    box-shadow: 0 0 20px rgb(0, 145, 189);
+    transform: translateY(-10px);
+}
+
+.icon2:hover{
+    
+    background: linear-gradient(5deg, purple, gold, red);
+    box-shadow: 0 0 5px purple,
+    0 0 10px gold,
+    0 0 20px red;
+    transform: translateY(-10px);
+}
+
+.icon3:hover{
+    background: rgb(255, 255, 255);
+    background-size: 20px;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    transform: translateY(-10px);
+}
+
+.footerNav{
+    margin: 30px 0;
+}
+
+.contato{
+    margin: 30px 0;
+    font-size: 1em;
+}
+
+.footerNav a{
+    font-size: 1.5em;
+    font-family: fonte2;
+    color: #ffffff;
+    text-decoration: none;
+    /* box-shadow: 0 0 10px rgb(255, 255, 255); */
+    border-radius: 10px 20px;
+    padding: 10px;
+    margin: 15px ;
+    transition: all .5s ease-in-out;
+}
+
+.footerNav a:hover{
+    background: rgb(58, 58, 58);
+    box-shadow: 0 0 30px white;
+    color: rgb(255, 255, 255);
+}
+
+.footer-bottom{
+    color: #ffffff;
+    /* background: linear-gradient(50deg, black,black,rgb(107, 0, 0), purple,black, black, black); */
+    font-size: 1.5em;
+    font-family: fonte2;
+    padding: 2em;
+    text-align: center;
 }
