@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br ">
+<head>
+    <link rel="shortcut icon" href="imgs/logo.portifólio-removebg-preview.png">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="design.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Projetos Design</title>
+</head>
+<body>
+
+ <!--------- SCROLL-------- -->
+
+ <div id="progressobar"></div>
+ <div id="scrollPath"></div>
+
+
+<!-- ------scroll js -->
+
+<script>
+ let progresso = document.getElementById('progressobar');
+
+ let totalHeight = document.body.scrollHeight = window.innerHeight;
+
+ window.onscroll = function(){
+     let progressoHeight = (window.pageYOffset / totalHeight) * 100;
+     progresso.style.height = progressoHeight + "%"
+ }
+</script>
+
+
+
+
+
+    <div class="intro">
+        <img src="imgs/logo.portifólio-removebg-preview.png" alt="ES logo" data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom" id="intro-img">
+        <h1 class="logo">
+            <Span class="logo-parts">S</Span>
+            <Span class="logo-parts">O</Span>
+            <Span class="logo-parts">U</Span>
+            <Span class="logo-parts">Z</Span>
+            <Span class="logo-parts">A</Span>
+        </h1>
+        <P> Bem-vindo(a) aos meus projetos</P>
+    </div>
+
+
+
+
+
+<!-- SCRIPT INTRO---------- -->
+<script>
+
+    let intro = document.querySelector('.intro');
+    let logo = document.querySelector('.logo');
+    let logoSpan = document.querySelectorAll('.logo-parts');
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+        logoSpan.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.add('active');
+            }, (index + 1) * 100);
+        });
+
+        setTimeout(() => {
+            logoSpan.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.remove('active');
+                span.classList.add('fade');
+            }, (span + 1) * 50);
+
+            });
+        }, 2000);
+
+            setTimeout(() => {
+                intro.style.top = '-100vh';
+            }, 2300);
+        });
+    });
+
+
+
+</script>
+
+<div class="content">
+
+    <!-- -------BOTÃO NAVEGAÇÃO--------- -->
+
+    <header class="header">
+        <img class="img-logo" src="imgs/logo.portifólio-removebg-preview.png" alt="">
+
+    <nav class="navbar">
+        <!-- <a href=""> Sobre</a> -->
+        <!-- <a href="#habilidades"> Habilidades</a> -->
+        <a href="#index.html"> Projetos</a>
+        <a href="#contato"> Contato </a>
+        <a href="index.html"> inicio </a>
+    </nav>
+</header>
+
+
+
+
+
+
+
+<!-- ARTES----------------- -->
+
+
+<h1 class="galeria-h1"> Artes feitas com Inteligencia Artificial</h1>
+
+<div class="grid-wrapper">
+<ul>
+    <li> <img src="img.Art/bubble.ia.cartoon.kawai.jpg" alt=""></li>
+    <li><img src="img.Art/buddy.puppy.jpeg" alt=""></li>
+    <li><img src="img.Art/dog.style.logo.jpeg" alt=""></li>
+    <li><img src="img.Art/puppy.lion.ia.jpg" alt=""></li>
+    <li><img src="img.Art/woman.glass.art.jpeg" alt=""></li>
+    <li><img src="img.Art/wolf.IA.puppy.colors.jpeg" alt=""></li>
+</ul>
+
+<br>
+<br>
+
+<h1 class="galeria-h1"> Artes Digitais </h1>
+<div class="grid-wrapper2">
+<ul>
+    <li> <img src="img.Art/WhatsApp Image 2024-03-27 at 9.31.01 PM.jpeg" alt=""></li>
+    <li><img src="imgs/wallpaper1.jpeg" alt=""></li>
+    <li><img src="img.Art/WhatsApp Image 2024-03-27 at 9.31.50 PM.jpeg" alt=""></li>
+    <li><img src="img.Art/WhatsApp Image 2023-11-21 at 10.27.32 PM (1).jpeg" alt=""></li>
+    <li><img src="img.Art/WhatsApp Image 2024-03-27 at 9.31.18 PM (1).jpeg" alt=""></li>
+    <li><img src="img.Art/WhatsApp Image 2023-11-21 at 10.27.34 PM.jpeg" alt=""></li>
+</ul>
+
+</div>
+
+<h1 class="galeria-h1"> Artes </h1>
+<div class="grid-wrapper2">
+<ul>
+    <li> <img src="img.Art/WhatsApp Image 2024-03-27 at 9.42.02 PM.jpeg" alt=""></li>
+    
+    <li><img src="img.Art/WhatsApp Image 2024-03-27 at 9.42.02 PM (1).jpeg" alt=""></li>
+   
+    <li><img src="img.Art/WhatsApp Image 2024-03-27 at 9.51.57 PM.jpeg" alt=""></li>
+
+    <li><img src="img.Art/WhatsApp Image 2024-03-27 at 9.42.01 PM (1).jpeg" alt=""></li>
+   
+    <li><img src="img.Art/WhatsApp Image 2024-03-27 at 9.42.00 PM.jpeg" alt=""></li>
+    
+    <li><img src="img.Art/WhatsApp Image 2024-03-27 at 9.51.59 PM.jpeg" alt=""></li>
+</ul>
+
+</div>
+
+
+
+<!-- FOOTER----------------- -->
+
+
+<div class="footer-container">
+
+    <div class="social-icons">
+        <div class="social-icon">
+            <a href="https://www.linkedin.com/in/eduarda-souza-3157942b0/" class="icon1"> <i class="fa-brands fa-linkedin-in"></i></a>
+
+            <a href="https://github.com/EduuhSouza" class="icon3"> <i class="fa-brands fa-github"></i></a>
+
+            <a href="https://www.instagram.com/souza.eduuh/" class="icon2"> <i class="fa-brands fa-instagram"></i></a>
+        
+    </div>
+
+    <div class="footerNav" id="contato">
+        <a href=""> 
+            <i class="fa-solid fa-envelope"></i> eduardasouzak4@gmail.com </a>
+            <a href=""><i class="fa-brands fa-square-whatsapp"></i> (51) 986248778 </a>
+            <a href="#inicio"> inicio </a>
+
+    </div>
+    <div class="footer-bottom">
+        Desenvolvido por Eduarda Souza | &real; Desenvolvimento Web FullStack Instituto da Oportunidade Social ( IOS ) |
+    </div>
+</div>
+
+
+</div>
+<script>
+    AOS.init();
+  </script>
+</body>
+</html>

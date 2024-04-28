@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<link rel="shortcut icon" href="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png">
+
+    <link rel="stylesheet" href="js.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Projetos em JavaScript</title>
+</head>
+<body>
+
+     <!--------- SCROLL-------- -->
+
+ <div id="progressobar"></div>
+ <div id="scrollPath"></div>
+
+
+<!-- ------scroll js -->
+
+<script>
+ let progresso = document.getElementById('progressobar');
+
+ let totalHeight = document.body.scrollHeight = window.innerHeight;
+
+ window.onscroll = function(){
+     let progressoHeight = (window.pageYOffset / totalHeight) * 100;
+     progresso.style.height = progressoHeight + "%"
+ }
+</script>
+
+
+
+
+
+    <div class="intro">
+        <img src="imgs/logo.portifólio-removebg-preview.png" alt="ES logo" data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom">
+        <h1 class="logo">
+            <Span class="logo-parts">S</Span>
+            <Span class="logo-parts">O</Span>
+            <Span class="logo-parts">U</Span>
+            <Span class="logo-parts">Z</Span>
+            <Span class="logo-parts">A</Span>
+        </h1>
+        <P> Bem-vindo(a) aos meus projetos</P>
+    </div>
+
+
+
+
+
+<!-- SCRIPT INTRO---------- -->
+<script>
+
+    let intro = document.querySelector('.intro');
+    let logo = document.querySelector('.logo');
+    let logoSpan = document.querySelectorAll('.logo-parts');
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+        logoSpan.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.add('active');
+            }, (index + 1) * 100);
+        });
+
+        setTimeout(() => {
+            logoSpan.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.remove('active');
+                span.classList.add('fade');
+            }, (span + 1) * 50);
+
+            });
+        }, 2000);
+
+            setTimeout(() => {
+                intro.style.top = '-100vh';
+            }, 2300);
+        });
+    });
+
+
+
+</script>
+
+<div class="body-card">
+
+    <!-- -------BOTÃO NAVEGAÇÃO--------- -->
+
+    
+    <!-- -------BOTÃO NAVEGAÇÃO--------- -->
+
+          <!-- -------BOTÃO NAVEGAÇÃO--------- -->
+
+
+          <header class="header">
+            
+            <img class="logo" src="imgs/logo.portifólio-removebg-preview.png" alt="">
+
+
+        <nav class="navbar">
+            <!-- <a href=""> Sobre</a> -->
+            <a href="#habilidades"> Habilidades</a>
+            <a href="#projetos"> Projetos</a>
+            <a href=""> Contato</a>
+            <a href="#inicio"> inicio </a>
+            
+    </nav>
+
+    <button id="btn-menu" onclick="animar()">
+        <span class="linha"></span>
+        <span class="linha"></span>
+        <span class="linha"></span>
+    </button>
+
+<!-- MOBILE -->
+
+<div class="menu-mobile" id="menu-mobile">
+
+<nav class="navbar-mobile">
+    <!-- <a href=""> Sobre</a> -->
+    <a href="#habilidades"> Habilidades</a>
+    <a href="#projetos"> Projetos</a>
+    <a href=""> Contato</a>
+    <a href="#inicio"> inicio </a>
+    
+</nav>
+</div>
+</div>
+
+
+
+
+<script>
+//mobile
+
+const menuDiv = document.getElementById('menu-mobile');
+const btnAnimar = document.getElementById('btn-menu'); 
+
+menuDiv.addEventListener('click', animar)
+
+function animar(){
+    menuDiv.classList.toggle('abrir');
+    btnAnimar.classList.toggle('ativar');
+}
+
+//final mobile
+</script>
+
+        <!--  final mobile -->
+
+
+
+<!-- DARKMODE -->
+        <section class="darkmode">
+
+            <label>
+                <input id="check" type="checkbox" id="check">
+        
+                <i class="fa-solid fa-sun" id="sun"></i>
+                <i class="fa-solid fa-moon" id="moon"></i>
+        
+                <span class="toggle"></span>
+            </label>
+        
+        </section>
+
+
+
+        <script>
+            const check = document.getElementById('check');
+        
+            check.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            })
+        
+        
+        </script>
+        
+
+    </header>
+
+    
+
+
+
+
+<h1 class="pr-h1"> Trabalhos em JavaScript </h1>
+    
+<div id="card-area">
+    <div class="wrapper">
+        <div class="box-area">
+        <div class="box">
+            <img src="img.js/WhatsApp Image 2024-03-27 at 11.30.34 PM.jpeg" alt="">
+            <div class="overlay">
+                <h3> Lista de Tarefas </h3>
+                <p> Projeto utilizando um Box rgb com animação, primeira vez utilizando o DarkMode.</p>
+                <div class="icon">
+                <a href="https://github.com/EduuhSouza/Lista-de-Tarefas"> <i class="fa-brands fa-square-github"></i></a>
+
+                <a href="https://eduuhsouza.github.io/Lista-de-Tarefas/"> <i class="fa-solid fa-sitemap"></i></a>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <img src="img.js/jogo.da.velha.jpeg" alt="">
+            <div class="overlay">
+                <h3> Jogo da Velha </h3>
+                <p> Primeiro Jogo da Velha utilizado JavaScript com o Alert na página mostrando o ganhador.</p>
+                <div class="icon">
+                    <a href="https://github.com/EduuhSouza/Jogo-da-Velha"> <i class="fa-brands fa-square-github"></i></a>
+    
+                    <a href="https://eduuhsouza.github.io/Jogo-da-Velha/"> <i class="fa-solid fa-sitemap"></i></a>
+                </div>
+            
+            </div>
+        </div>
+
+
+        <div class="box">
+            <img src="img.js/WhatsApp Image 2024-03-27 at 11.32.05 PM.jpeg" alt="">
+            <div class="overlay">
+                <h3> Gerador de Tabuada </h3>
+                <p> Realizando atividade de gerador de tabuada com foco em escolas e aprendizagem. </p>
+                <div class="icon">
+                    <a href="https://github.com/EduuhSouza/tabuada"> <i class="fa-brands fa-square-github"></i></a>
+    
+                    <a href="https://eduuhsouza.github.io/tabuada/"> <i class="fa-solid fa-sitemap"></i></a>
+                
+            </div>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="img.js/WhatsApp Image 2024-03-27 at 11.32.50 PM.jpeg" alt="">
+            <div class="overlay">
+                <h3> Quizz </h3>
+                <p> Quiz realizado como atividade de curso com JavaScript, tema livre. </p>
+                <div class="icon">
+                    <a href="https://github.com/EduuhSouza/quiz"> <i class="fa-brands fa-square-github"></i></a>
+    
+                    <a href="https://eduuhsouza.github.io/quiz/"> <i class="fa-solid fa-sitemap"></i></a>
+                
+            </div>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <img src="img.js/WhatsApp Image 2024-03-27 at 11.33.31 PM.jpeg" alt="">
+            <div class="overlay">
+                <h3> IMC </h3>
+                <p> Primeiro contato com o JavaScript, fazendo um medidor de Massa corporal de acordo com o peso e atulra.</p>
+                <div class="icon">
+                    <a href="https://github.com/EduuhSouza/IMC.trabalho"> <i class="fa-brands fa-square-github"></i></a>
+    
+                    <a href="https://eduuhsouza.github.io/IMC.trabalho/"> <i class="fa-solid fa-sitemap"></i></a>
+                
+            </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img.js/WhatsApp Image 2024-03-27 at 11.34.48 PM.jpeg" alt="">
+            <div class="overlay">
+                <h3> Calculadora </h3>
+                <p> Primeira Calculadora utilizando JavaScript, atividade de curso, tema livre. </p>
+                <div class="icon">
+                    <a href="https://github.com/EduuhSouza/Calculadora"> <i class="fa-brands fa-square-github"></i></a>
+    
+                    <a href="https://eduuhsouza.github.io/Calculadora/"> <i class="fa-solid fa-sitemap"></i></a>
+                
+            </div>
+            </div>
+        </div>
+
+</div>
+</div>
+
+
+<!-- FOOTER----------------- -->
+
+
+<div class="footer-container">
+
+    <div class="social-icons">
+        <div class="social-icon">
+            <a href="https://www.linkedin.com/in/eduarda-souza-3157942b0/" class="icon1"> <i class="fa-brands fa-linkedin-in"></i></a>
+
+            <a href="https://github.com/EduuhSouza" class="icon3"> <i class="fa-brands fa-github"></i></a>
+
+            <a href="https://www.instagram.com/souza.eduuh/" class="icon2"> <i class="fa-brands fa-instagram"></i></a>
+        
+    </div>
+
+    <div class="footerNav" id="contato">
+        <a href=""> 
+            <i class="fa-solid fa-envelope"></i> eduardasouzak4@gmail.com </a>
+            <a href="index.html"> inicio </a>
+
+    </div>
+    <div class="footer-bottom">
+        Desenvolvido por Eduarda Souza | &real; Desenvolvimento Web FullStack Instituto da Oportunidade Social ( IOS ) |
+    </div>
+</div>
+
+</div>
+    
+</body>
+</html>

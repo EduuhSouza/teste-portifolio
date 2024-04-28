@@ -1,3 +1,6 @@
+.dark-mode #stars{
+   color: black;
+}
 
 #title {
     position: absolute;
@@ -585,6 +588,4 @@
         transform: translateY(-2000px);
     }
 }
-
-
 

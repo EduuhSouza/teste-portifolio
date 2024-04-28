@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <link rel="stylesheet" href="htmlcss.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <!--------- SCROLL-------- -->
+
+ <div id="progressobar"></div>
+ <div id="scrollPath"></div>
+
+
+<!-- ------scroll js -->
+
+<script>
+ let progresso = document.getElementById('progressobar');
+
+ let totalHeight = document.body.scrollHeight = window.innerHeight;
+
+ window.onscroll = function(){
+     let progressoHeight = (window.pageYOffset / totalHeight) * 100;
+     progresso.style.height = progressoHeight + "%"
+ }
+</script>
+
+
+
+
+
+    <div class="intro">
+        <img src="imgs/logo.portifólio-removebg-preview.png" alt="ES logo" data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom">
+        <h1 class="logo">
+            <Span class="logo-parts">S</Span>
+            <Span class="logo-parts">O</Span>
+            <Span class="logo-parts">U</Span>
+            <Span class="logo-parts">Z</Span>
+            <Span class="logo-parts">A</Span>
+        </h1>
+        <P> Bem-vindo(a) aos meus projetos</P>
+    </div>
+
+
+
+
+
+<!-- SCRIPT INTRO---------- -->
+<script>
+
+    let intro = document.querySelector('.intro');
+    let logo = document.querySelector('.logo');
+    let logoSpan = document.querySelectorAll('.logo-parts');
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+        logoSpan.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.add('active');
+            }, (index + 1) * 100);
+        });
+
+        setTimeout(() => {
+            logoSpan.forEach((span, index) => {
+            setTimeout(() => {
+                span.classList.remove('active');
+                span.classList.add('fade');
+            }, (span + 1) * 50);
+
+            });
+        }, 2000);
+
+            setTimeout(() => {
+                intro.style.top = '-100vh';
+            }, 2300);
+        });
+    });
+
+
+
+</script>
+
+<div class="body-card">
+
+    <!-- -------BOTÃO NAVEGAÇÃO--------- -->
+
+    <header class="header">
+        <img class="img-logo" src="imgs/logo.portifólio-removebg-preview.png" alt="">
+
+    <nav class="navbar">
+        <!-- <a href=""> Sobre</a> -->
+        <a href="#habilidades"> Habilidades</a>
+        <a href="#projetos"> Projetos</a>
+        <a href=""> Contato</a>
+        <a href="index.html"> inicio </a>
+    </nav>
+</header>
+
+
+<h1 class="pr-h1"> Artes feitas com Inteligencia Artificial</h1>
+    
+<div id="card-area">
+    <div class="wrapper">
+        <div class="box-area">
+        <div class="box">
+            <img src="img.Art/puppy.lion.ia.jpg" alt="">
+            <div class="overlay">
+                <h3> IA artist </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis </p>
+                <div class="icon">
+                <a href="#"> <i class="fa-brands fa-square-github"></i></a>
+
+                <a href="#"> <i class="fa-solid fa-sitemap"></i></a>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <img src="img.Art/bubble.ia.cartoon.kawai.jpg" alt="">
+            <div class="overlay">
+                <h3> IA artist </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis </p>
+                <a href="img.Art/dog.style.logo.jpeg" class="icon1"> <i class="fa-brands fa-linkedin-in"></i></a>
+            
+            </div>
+        </div>
+
+
+        <div class="box">
+            <img src="img.Art/woman.glass.art.jpeg" alt="">
+            <div class="overlay">
+                <h3> IA artist </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aut assumenda repudiandae natus ipsa </p>
+                <a href="#"> <i class="fa-brands fa-square-github"></i></a>
+                <a href="#"> <i class="fa-solid fa-sitemap"></i></a>
+            </div>
+        </div>
+
+        
+        <div class="box">
+            <img src="img.Art/woman.glass.art.jpeg" alt="">
+            <div class="overlay">
+                <h3> IA artist </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aut assumenda repudiandae natus ipsa </p>
+                <a href="#"> <i class="fa-brands fa-square-github"></i></a>
+                <a href="#"> <i class="fa-solid fa-sitemap"></i></a>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <img src="img.Art/woman.glass.art.jpeg" alt="">
+            <div class="overlay">
+                <h3> IA artist </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aut assumenda repudiandae natus ipsa </p>
+                <a href="#"> <i class="fa-brands fa-square-github"></i></a>
+                <a href="#"> <i class="fa-solid fa-sitemap"></i></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img.Art/woman.glass.art.jpeg" alt="">
+            <div class="overlay">
+                <h3> IA artist </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aut assumenda repudiandae natus ipsa </p>
+                <a href="#"> <i class="fa-brands fa-square-github"></i></a>
+                <a href="#"> <i class="fa-solid fa-sitemap"></i></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img.Art/woman.glass.art.jpeg" alt="">
+            <div class="overlay">
+                <h3> IA artist </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aut assumenda repudiandae natus ipsa </p>
+                <a href="#"> <i class="fa-brands fa-square-github"></i></a>
+                <a href="#"> <i class="fa-solid fa-sitemap"></i></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="img.Art/woman.glass.art.jpeg" alt="">
+            <div class="overlay">
+                <h3> IA artist </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aut assumenda repudiandae natus ipsa </p>
+                <a href="#"> <i class="fa-brands fa-square-github"></i></a>
+                <a href="#"> <i class="fa-solid fa-sitemap"></i></a>
+            </div>
+        </div>
+    </div>
+  
+</div>
+</div>
+
+
+
+</div>
+    
+</body>
+</html>

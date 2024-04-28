@@ -37,11 +37,9 @@ body{
     margin: 0;
     box-sizing: border-box;
     background-color: rgb(0, 0, 0);
-    outline: none;
-
    
     font-family: sans-serif;
-    /* transition: all 2s ease; */
+    transition: background 2s ease-in-out;
 }
 
 html{
@@ -114,6 +112,202 @@ html{
 /* ----FIM SCROLL */
 
 
+ 
+ /*  --------------   DARKMODE  --------   */
+ 
+ .dark-mode{
+    background: linear-gradient(60deg, white, rgba(0, 119, 255, 0.363), rgba(255, 0, 0, 0.575), rgb(255, 174, 0), gray, white);
+
+   
+}
+
+
+.dark-mode p{
+    color: black;
+}
+
+.dark-mode h1{
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .text-content-home h1{
+    color: black;
+}
+
+.dark-mode p{
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+.dark-mode span::before{
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .text-content-home span{
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+
+/* NAVBAR */
+
+.dark-mode header{
+    color: black;
+    background: rgba(255, 255, 255, 0.521);
+}
+
+.dark-mode .navbar a:hover{
+    color: white;
+    background: black;
+}
+
+.dark-mode .navbar a{
+    color: black;
+}
+
+/* CARDS */
+.dark-mode .container-pr .card-pr .box .content-pr a,
+.dark-mode .container-pr2 .card-pr2 .box2 .content-pr2 a,
+.dark-mode .container-pr3 .card-pr3 .box3 .content-pr3 a {
+background: black;
+color: white;
+}
+
+
+/* ICONES */
+.dark-mode .icon3:hover{
+    background: rgb(0, 0, 0);
+    background-size: 20px;
+    box-shadow: 0 0 20px rgb(230, 230, 230);
+    transform: translateY(-10px);
+}
+
+.dark-mode .icon3 i:hover{
+    color: white;
+}
+
+
+/* PARALLAX */
+.dark-mode section.modulo.content{
+    background-color: #5e5d5c31;
+}
+
+.dark-mode section.modulo h2{
+    color: white;
+}
+
+/* CARDS */
+
+.dark-mode .projetos{
+    color: white ;
+}
+
+.dark-mode .container2{
+    background-color: rgba(56, 56, 56, 0.507);
+}
+
+.dark-mode .container2 h1{
+    color: black;
+    background: linear-gradient(40deg,gray, purple, rgb(255, 174, 0), gray, gray);
+}
+
+.dark-mode .container-pr2 .card-pr2 .box2,
+.dark-mode .container-pr3 .card-pr3 .box3,
+.dark-mode .container-pr .card-pr .box{
+    transition: all 1s ease;
+}
+
+.dark-mode .container-pr .card-pr,
+.dark-mode .container-pr2 .card-pr2,
+.dark-mode .container-pr3 .card-pr3{
+box-shadow: inset 0px 5px 5px rgb(0, 0, 0),
+     inset 0px 5px 15px rgb(0, 0, 0);
+}
+
+/* FOOTER */
+.dark-mode .footer-container{
+    background: rgba(255, 255, 255, 0.39);
+}
+
+.dark-mode .footer-bottom{
+    background: rgba(0, 0, 0, 0.432);
+}
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+section{
+    top: 0;
+    left: 1;
+}
+
+.darkmode label{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+
+
+.darkmode input{
+    position: absolute;
+    opacity: 0;
+}
+
+/* ------------icones---------- */
+#sun{
+    position: absolute;
+    font-size: 2em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.644));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#sun{
+    transition-delay: .8s ;
+    transform: scale(1) rotate(360deg);
+}
+
+
+#moon{
+    font-size: 2em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0, 0 ,0, .5));
+    transition: 1s ease;
+
+}
+
+.darkmode input:checked~#moon{
+    transition-delay: 0s ;
+    transform: rotate(360deg) scale(0);
+}
+
+/*--------final icones------------- */
+
+.toggle{
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #2b2b2b;
+    border-radius: 50%;
+    box-shadow: 
+    inset 0 8px 60px rgba(0, 0 ,0, .1),
+    inset 0 8px 8px rgba(0, 0 ,0, .1),
+    inset 0 -4px 4px rgba(0, 0 ,0, .1);
+    z-index: -1;
+    transition: 1s;
+}
+
+.darkmode input:checked~.toggle{
+    background: #f8f8f8;
+
+}
+
+
+
 /* --------- EFEITO VIDRO NAVBAR------- */
 
 .header{
@@ -153,10 +347,12 @@ html{
 
 
 .navbar a{
+    /* margin-right: 2em; */
     color: white;
     font-size: 1.3em;
     text-decoration: none;
-    margin-left: 35px;
+    /* margin-left: 35px; */
+    margin: 1em;
     transition: 1s;
     font-family: fonte5;
     transition: all .5s ease-in-out;
@@ -209,8 +405,8 @@ section.home{
     margin-top: 50%;
     font-size: 3em;
     color: #f0f8ff;
-    font-family: fonte4;
-    /* text-transform: uppercase; */
+    /* font-family: fonte2; */
+    text-transform: uppercase;
     /* font-weight: 600; */
 }
 
@@ -228,7 +424,7 @@ section.home{
 }
 
 
-span::before{ 
+.text::before{ 
     content: "Eduarda";
     position: absolute;
     width: 0%;
@@ -240,7 +436,7 @@ span::before{
     filter: drop-shadow(0 0 10px rgb(255, 230, 0));
 }
 
-span:hover::before{
+.text:hover::before{
     width: 100%;
    
 } 
@@ -255,6 +451,113 @@ span:hover::before{
     }
 }
 
+/* MENU MOBILE */
+
+.menu-mobile{
+    text-align: center;
+    background-color: rgba(97, 97, 97, 0.527);
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    /* display: none; */
+    visibility: hidden;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.menu-mobile nav a{
+    margin-right: 2em;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px black;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 1s;
+    font-family: fonte5;
+    transition: all .5s ease-in-out;
+    
+    display: block;
+    padding: 20px 30px;
+    
+}
+
+.menu-mobile nav a:hover{
+   background-color:#2b2b2b;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    padding: 20px 25px;
+
+}
+
+/* BOTAO ICONE */
+
+button{
+    margin-right: 3em;
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgb(255, 183, 0);
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.linha{
+    width: 50px;
+    height: 4px;
+    background-color: rgb(255, 183, 0);
+    box-shadow: 0 0 10px rgb(255, 183, 0);
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+    transform-origin: center ;
+    transition: .3s;
+}
+
+button.ativar{
+    /* border: 4px solid red; */
+    box-shadow: 0 0 5px red;
+
+}
+
+button.ativar .linha:nth-child(1){
+    transform: translateY(10px) rotate(-40deg);
+    background-color: red;
+    box-shadow: 0 0 10px red;
+}
+
+button.ativar .linha:nth-child(3){
+    transform: translateY(-18px) rotate(40deg);
+    background-color: red;
+    box-shadow: 0 0 10px red;
+}
+
+button.ativar .linha:nth-child(2){
+    opacity: 0;
+}
+
+/* CELULAR */
+
+@media screen and (max-width: 1000px) {
+    .navbar, a{
+        display: none;
+    }
+    
+    .logo{
+        width: 20%;
+    }
+
+    .menu-mobile.abrir{
+        visibility: visible;
+        height: calc(100vh - 120px);
+    }
+
+    button{
+        display: block;
+    }
+}
 
 /* ----- PARAGRAFO---------- */
 
@@ -270,14 +573,20 @@ section.home .flex{
 }
 
 /* -------------IMAGEM PERFIL------------- */
-.flex-img{
-    margin-top: 100px;
-}
+
 
 .img-perfil img{
-    width: 100%;
-    border-radius: 25% 10%;
+    width: 150%;
+    /* height: 50%; */
+    margin-top: 40%;
+    margin-left: -15%;
+    transition: all .5s ease;
     
+}
+
+.img-perfil img:hover{
+    box-shadow: 0 0 20px 10px rgb(255, 0, 0),
+    0 0 30px rgb(255, 255, 255);
 }
 
 /* ------ICONES----------- */
@@ -411,15 +720,16 @@ section.modulo.parallax:after{
 .container2{
 
     content: "";
-    height: 150vh;
+    height: 100vh;
     width: 100%;
-    background-color: #91919180;
+    background-color: #4b4b4b80;
     /* z-index: 8;  */
     /* position: absolute; */
     /* background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0, 0,0,0) 20%, rgb(34, 0, 66)) ; */
 
     
 }
+
 
 
 /*------------ CARD SOFTSKILL ---------*/
@@ -436,6 +746,7 @@ section.modulo.parallax:after{
     /* margin-top: 3em; */
 text-align: center;
 font-size: 2em;
+font-family: fonte2;
 color: white;
 background: linear-gradient(40deg,black, black, purple, rgb(255, 174, 0), black, black);
 padding: 1em;
@@ -466,12 +777,16 @@ padding: 1em;
 color: #ffc400;
 }
 
+#php-card:hover{
+    color: gray;
+}
+
 #bt-card:hover{
 color: rgb(212, 0, 255);
 }
 
 #design-card:hover{
-    color: white;
+    color: rgb(0, 247, 255);
 }
 
 #org-card:hover{
@@ -485,6 +800,7 @@ color: rgb(212, 0, 255);
 
 /* projetos------------------------- */
 
+
 .body-pr{
     display: flex;
     justify-content: center;
@@ -497,6 +813,7 @@ color: rgb(212, 0, 255);
     color: white;
     text-align: center;
     margin-top: 2em;
+    font-family: fonte2;
 }
 
 .container-pr{
@@ -516,8 +833,8 @@ color: rgb(212, 0, 255);
     position: relative;
     min-width: 320px ;
     height: 440px;
-    box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.719),
-     inset 0px 5px 5px rgba(204, 0, 255, 0.493);
+    box-shadow: inset 0px 5px 5px rgb(255, 255, 255),
+     inset 0px 5px 5px rgb(255, 166, 0);
     border-radius: 15px;
     margin: 30px;
 }
@@ -622,12 +939,24 @@ width: 80%;
         
     }
     
+    .container-pr .card-pr,
+    .container-pr2 .card-pr2,
+    .container-pr3 .card-pr3{
+    box-shadow: inset 0px 5px 5px rgb(255, 255, 255),
+         inset 0px 5px 15px rgb(255, 255, 255);
+    }
+
+    .container-pr .card-pr .box,
+    .container-pr2 .card-pr2 .box2,
+    .container-pr3 .card-pr3 .box3{
+        transition: all .5s ease-in-out;
+        
+    }
+
     .container-pr2 .card-pr2{
         position: relative;
         min-width: 320px ;
         height: 440px;
-        box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.719),
-         inset 0px 5px 5px rgba(255, 0, 0, 0.493);
         border-radius: 15px;
         margin: 30px;
     }
@@ -641,14 +970,13 @@ width: 80%;
 
         height: 60%;
 
-        background: linear-gradient(30deg, black, rgba(144, 2, 238, 0.678), rgb(150, 1, 1), black);      
+        background: linear-gradient(30deg, black, rgb(238, 203, 2), rgb(2, 154, 255), black);      
     
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 1s ease-in-out;
     }
     
     .container-pr2 .card-pr2 .box2 .content-pr2{
@@ -741,8 +1069,6 @@ width: 80%;
         position: relative;
         min-width: 320px ;
         height: 440px;
-        box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.719),
-         inset 0px 5px 5px rgba(204, 0, 255, 0.493);
 
         border-radius: 15px;
         margin: 30px;
@@ -754,7 +1080,7 @@ width: 80%;
         left: 20px;
         right: 20px;
         bottom: 20px;
-        background: linear-gradient(30deg, black, rgba(144, 2, 238, 0.678), rgb(150, 1, 1), black);
+        background: linear-gradient(30deg, black, rgb(255, 196, 0), rgb(243, 111, 2), black);
         
         height: 60%;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -762,7 +1088,6 @@ width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: .5s ease-in-out;
     }
     
     .container-pr3 .card-pr3 .box3 .content-pr3{
@@ -845,23 +1170,32 @@ footer{
     width: 100%;
     padding: 70px 30px 20px;
     box-shadow: 0 0 30px white;
+}
+
+.social-icons{
+    /* display: flex; */
+    /* justify-content: center; */
     text-align: center;
+}
+.social-icons a:hover{
+    transform: translateY(-10px);
+}
+
+.social-icons a{
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+
 }
 
 .footerNav{
     margin: 30px 0;
 }
 
-.contato{
-    margin: 30px 0;
-    font-size: 1em;
-}
-
 .footerNav a{
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: fonte2;
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffc400;
     /* box-shadow: 0 0 10px rgb(255, 255, 255); */
     border-radius: 10px 20px;
     padding: 10px;
@@ -878,22 +1212,85 @@ footer{
 .footer-bottom{
     color: #ffffff;
     background: linear-gradient(50deg, black,black,rgb(107, 0, 0), purple,black, black, black);
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: fonte2;
     padding: 2em;
     text-align: center;
 }
 
+
 /* MEDIA -------- */
 @media (max-width: 720px) {
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar a{
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    /* margin-left: 35px; */
+    
+    /* transition: 1s; */
+    font-family: fonte5;
+    transition: all .5s ease-in-out;
+    
+}
+
+
+.text-content-home h1{
+    margin-top: 10%;
+    font-size: 2em;
+    color: #f0f8ff;
+    /* font-family: fonte2; */
+    text-transform: uppercase;
+    /* font-weight: 600; */
+}
+
+.text-content-home span{
+    color: transparent;
+    /* -webkit-text-stroke: 1px rgb(255, 217, 0); */
+    position: relative;
+    transition: all 1s;
+}
+
+span::before{ 
+    border-right: 0 solid rgb(255, 217, 0);
+}
+
+
+
+
+/* -------------IMAGEM PERFIL------------- */
+.flex{
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.img-perfil img{
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 25% 10%;
+    
+}
 
 /* CARDS -----------*/
 
 .body-card{
     display: flex;
-    flex-direction: column;
-
+   flex-direction: row;
+    width: 90%;
+    height: 90%;
+    margin-left: 15%;
+    margin-top: 70%;
 }
+
+
+
 
 .wrapper{
     transition: all 0.5s;
@@ -919,9 +1316,6 @@ footer{
     padding: 4% 5%;
 
 }
-
-
-
 
 
 /* PROJETOS -------*/

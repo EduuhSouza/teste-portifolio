@@ -1,3 +1,27 @@
+font-face {
+    font-family: fonte1;
+    src: url(fontes/Good\ Wish.otf);
+}
+
+@font-face {
+    font-family: fonte2;
+    src: url(fontes/KGRedHands.ttf);
+} /*  fonte parágafro */
+
+@font-face {
+    font-family: fonte3;
+    src: url(fontes/appopaint-Regular.otf);
+}/* Fonte h1  */
+
+@font-face {
+    font-family: fonte4;
+    src: url(fontes/edosz.ttf);
+} /* fonte navBar */
+
+
+
+
+
 body{
     min-height: 100vh;
     /* width: 90%; */
@@ -7,7 +31,11 @@ body{
     /* display: grid; */
     /* place-items: center; */
 
-    background: linear-gradient(40deg, black, rgba(255, 145, 0, 0.568), gray);
+    /* background: linear-gradient(50deg, black, black, rgba(255, 145, 0, 0.822), rgba(0, 110, 255, 0.507), rgb(0, 0, 0), black); */
+    background-color: #FFAB02;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23FFAB02' cx='50' cy='0' r='50'/%3E%3Cg fill='%23ff9c1e' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23ff8d2f' cx='50' cy='100' r='50'/%3E%3Cg fill='%23ff7f3c' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23ff7248' cx='50' cy='200' r='50'/%3E%3Cg fill='%23fc6654' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f45b5e' cx='50' cy='300' r='50'/%3E%3Cg fill='%23ea5267' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23de4c6f' cx='50' cy='400' r='50'/%3E%3Cg fill='%23d14777' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c1447c' cx='50' cy='500' r='50'/%3E%3Cg fill='%23b14380' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%239f4283' cx='50' cy='600' r='50'/%3E%3Cg fill='%238d4184' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%237a4183' cx='50' cy='700' r='50'/%3E%3Cg fill='%23674080' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23543f7b' cx='50' cy='800' r='50'/%3E%3Cg fill='%23413c75' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%232e3a6d' cx='50' cy='900' r='50'/%3E%3Cg fill='%231b3664' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%2303325A' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: contain;
 }
 
 html{
@@ -121,12 +149,13 @@ html{
 
 
 .navbar a{
+    margin: 2em;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.5em;
     text-decoration: none;
     margin-left: 35px;
     transition: 1s;
-    font-family: fonte5;
+    font-family: fonte4;
     transition: all .5s ease-in-out;
     
 }
@@ -157,6 +186,141 @@ html{
 }
 
 
+/* DARKMODE */
+
+.dark-mode{
+    /* background: white; */
+    /* background: linear-gradient(40deg, white, rgb(255, 115, 0), rgb(255, 196, 0), white, black); */
+    background-color: #FFF40E;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23FFF40E' cx='50' cy='0' r='50'/%3E%3Cg fill='%23e0f621' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23bff735' cx='50' cy='100' r='50'/%3E%3Cg fill='%239df74a' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%2376f65e' cx='50' cy='200' r='50'/%3E%3Cg fill='%2341f372' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300f086' cx='50' cy='300' r='50'/%3E%3Cg fill='%2300ed9b' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300e9ae' cx='50' cy='400' r='50'/%3E%3Cg fill='%2300e4c2' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300dfd4' cx='50' cy='500' r='50'/%3E%3Cg fill='%2300d9e4' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300d3f3' cx='50' cy='600' r='50'/%3E%3Cg fill='%2300ccff' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300c5ff' cx='50' cy='700' r='50'/%3E%3Cg fill='%2300bdff' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300b5ff' cx='50' cy='800' r='50'/%3E%3Cg fill='%2300acff' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%2300a2ff' cx='50' cy='900' r='50'/%3E%3Cg fill='%230098ff' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23148DFF' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: contain;
+}
+
+/*  NAVBAR*/
+
+.dark-mode .galeria-h1{
+    background: rgba(112, 111, 111, 0.651);
+    color: #000000;
+}
+
+.dark-mode .pr-h1{
+    color: black;
+    background: rgba(255, 255, 255, 0.644);
+}
+
+.dark-mode header{
+    color: black;
+    background: rgba(255, 255, 255, 0.521);
+}
+
+.dark-mode .navbar a:hover{
+    color: white;
+    background: black;
+}
+
+.dark-mode .navbar a{
+    color: black;
+}
+
+/* footer */
+
+.dark-mode .footer-container{
+    background: rgba(255, 255, 255, 0.411);
+}
+
+.dark-mode .icon3:hover{
+    background: black;
+    color: white;
+}
+
+.dark-mode .icon3 i:hover{
+    color: white;
+}
+
+.dark-mode .footerNav a{
+    color: black;
+}
+
+.dark-mode .footer-bottom{
+    color: black;
+
+}
+
+
+/* FORMATAÇÃO BOTAO DARKMODE */
+section{
+    top: 0;
+    left: 1;
+}
+
+.darkmode label{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+
+
+.darkmode input{
+    position: absolute;
+    opacity: 0;
+}
+
+/* ------------icones---------- */
+#sun{
+    position: absolute;
+    font-size: 2em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.644));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#sun{
+    transition-delay: .8s ;
+    transform: scale(1) rotate(360deg);
+}
+
+
+#moon{
+    font-size: 2em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0, 0 ,0, .5));
+    transition: 1s ease;
+
+}
+
+.darkmode input:checked~#moon{
+    transition-delay: 0s ;
+    transform: rotate(360deg) scale(0);
+}
+
+/*--------final icones------------- */
+
+.toggle{
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #2b2b2b;
+    border-radius: 50%;
+    box-shadow: 
+    inset 0 8px 60px rgba(70, 70, 70, 0.1),
+    inset 0 8px 8px rgba(80, 80, 80, 0.1),
+    inset 0 -4px 4px rgba(99, 99, 99, 0.1);
+    z-index: -1;
+    transition: 1s;
+}
+
+.darkmode input:checked~.toggle{
+    background: #f8f8f8;
+
+}
 
 
 /* intro---------------------- */
@@ -204,7 +368,8 @@ img{
 .intro p{
     color: white;
     font-size: 1.5rem;
-    margin-top: 150px;
+    margin-top: 350px;
+    font-family: fonte2;
 }
 
 .logo{
@@ -245,8 +410,9 @@ img{
 /* projetos-------------------- */
 
 .pr-h1{
+    font-family: fonte3;
     margin-top: 7em;
-    color: #ffd000;
+    color: #ffffff;
     box-shadow: 0 0 20px white;
     padding: 2em;
     text-align: center ;
@@ -290,7 +456,7 @@ margin-top: 50px;
 .overlay{
    height: 0;
    width: 100%;
-   background: linear-gradient(transparent, #7c009b8f 58%);
+   background: linear-gradient(transparent, #7c009ba8 58%);
    border-radius: 10px;
    position: absolute;
    left: 0;
@@ -311,9 +477,10 @@ margin-top: 50px;
    margin-bottom: 5px;
    margin-top: 80%;
    font-family: sans-serif;
-   font-size: 30px;
+   font-size: 20px;
    letter-spacing: 2px;
-   color: #ffd000;
+   color: #ff9100;
+   font-family: fonte2;
 }
 
 .icon{
@@ -339,13 +506,15 @@ margin-top: 50px;
 }
 
 .icon i:hover{
-    color: #ffbb00;
+    color: #000000;
     font-size: 45px;
 }
 
 .overlay p{
-   width: 100%;
-   color: #ffd000;
+   width: 130%;
+   color: #ffffff;
+   font-size: 12px;
+   font-family: fonte2;
 }
 
 .box:hover img{

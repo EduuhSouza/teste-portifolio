@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script defer src="js.js"></script>
 
@@ -54,20 +55,97 @@
 
         <!-- --FIM SCROLL -->
 
-        
+
+
     
         <!-- -------BOTÃO NAVEGAÇÃO--------- -->
 
+
         <header class="header">
+            
             <img class="logo" src="imgs/logo.portifólio-removebg-preview.png" alt="">
+
 
         <nav class="navbar">
             <!-- <a href=""> Sobre</a> -->
             <a href="#habilidades"> Habilidades</a>
             <a href="#projetos"> Projetos</a>
-            <a href="#contatos"> Contato</a>
+            <a href=""> Contato</a>
             <a href="#inicio"> inicio </a>
-        </nav>
+            
+    </nav>
+
+    <button id="btn-menu" onclick="animar()">
+        <span class="linha"></span>
+        <span class="linha"></span>
+        <span class="linha"></span>
+    </button>
+
+<!-- MOBILE -->
+
+<div class="menu-mobile" id="menu-mobile">
+
+<nav class="navbar-mobile">
+    <!-- <a href=""> Sobre</a> -->
+    <a href="#habilidades"> Habilidades</a>
+    <a href="#projetos"> Projetos</a>
+    <a href=""> Contato</a>
+    <a href="#inicio"> inicio </a>
+    
+</nav>
+</div>
+</div>
+
+
+
+
+<script>
+//mobile
+
+const menuDiv = document.getElementById('menu-mobile');
+const btnAnimar = document.getElementById('btn-menu'); 
+
+menuDiv.addEventListener('click', animar)
+
+function animar(){
+    menuDiv.classList.toggle('abrir');
+    btnAnimar.classList.toggle('ativar');
+}
+
+//final mobile
+</script>
+
+        <!--  final mobile -->
+
+
+
+<!-- DARKMODE -->
+        <section class="darkmode">
+
+            <label>
+                <input id="check" type="checkbox" id="check">
+        
+                <i class="fa-solid fa-sun" id="sun"></i>
+                <i class="fa-solid fa-moon" id="moon"></i>
+        
+                <span class="toggle"></span>
+            </label>
+        
+        </section>
+
+
+
+        <script>
+            const check = document.getElementById('check');
+        
+            check.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            })
+        
+        
+        </script>
+        
+
     </header>
 
     
@@ -77,20 +155,19 @@
         <div class="content-home">
             <div class="flex">
             <div class="text-content-home">
-            <h1> Oi, eu sou <span>Eduarda</span></h1>
+            <h1> Oi, eu sou <span class="text">Eduarda</span></h1>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aperiam, suscipit provident iure maxime fugit velit non sint aut itaque, ad laudantium quo labore atque quisquam rem dolores eaque cupiditate!</p>
+            <p> Amo design e artes em geral, estudo programação pois acho que é uma área onde se pode soltar a criatividade a vontade e explorar melhor os elementos. Faço artes personalizadas e artes com Inteligência atificial á algum tempo e sempre estou aprendendo coisas novas sobre a arte. </p>
 
 
         </div>
 
-        <div class="flex-img">
+
        <div class="img-perfil">
-        <div class="slider">
-        <img src="imgs/Perfil.jpeg" alt="" class="selected">
-        <!-- <img src="imgs/avatar2.jpeg" alt=""> -->
-       </div>
-    </div>
+        
+        <img src="imgs/Perfil.jpeg" alt="">
+
+</div>
 </div>
 
      </div>
@@ -175,6 +252,12 @@
     <p> JavaScript </p>
 </i>
 
+<!--    PHP     -->
+
+<i class="fa-brands fa-php" id="php-card">
+    <p>PHP</p>
+</i>
+
 <!-- -------- bootstrap---------- -->
 <i class="fa-brands fa-bootstrap" id="bt-card">
     <p> Bootstrap </p>
@@ -195,6 +278,7 @@
 <i class="fa-solid fa-people-group" id="equipe-card">
     <p>Trabalho em Equipe</p>
 </i>
+
 
 
         </div>
@@ -264,6 +348,8 @@
 
 <!-- FOOTER----------------- -->
 
+<!-- FOOTER----------------- -->
+
 
 <div class="footer-container">
 
@@ -277,16 +363,16 @@
         
     </div>
 
-    <div class="footerNav" id="contatos">
+    <div class="footerNav" id="contato">
         <a href=""> 
             <i class="fa-solid fa-envelope"></i> eduardasouzak4@gmail.com </a>
-            <a href=""><i class="fa-brands fa-square-whatsapp"></i> (51) 986248778 </a>
-            <a href="#inicio"> inicio </a>
+            <a href="index.html"> inicio </a>
 
     </div>
     <div class="footer-bottom">
         Desenvolvido por Eduarda Souza | &real; Desenvolvimento Web FullStack Instituto da Oportunidade Social ( IOS ) |
     </div>
+</div>
 </div>
 
 
